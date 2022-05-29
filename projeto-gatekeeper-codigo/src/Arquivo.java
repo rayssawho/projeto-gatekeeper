@@ -2,7 +2,6 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Arquivo {
 
 
@@ -75,7 +74,6 @@ public class Arquivo {
     public void abrirArquivos(String caminho) {
 
         File diretorio = new File(caminho);
-        //TODO realizar tratamento de erro, caso o arquivo seja null
         try {
             arquivos = diretorio.listFiles();
             System.out.println("\nForam lidos " + arquivos.length + " arquivos.");
@@ -84,9 +82,7 @@ public class Arquivo {
             System.err.println("Você digitou um caminho inválido!" +
                     "Tente adicionar apenas o caminho da pasta " +
                     "com os arquivos que deseja validar");
-
         }
-
 
         try {
             FileFilter filtro = new FileFilter() {
@@ -196,7 +192,6 @@ public class Arquivo {
             System.out.println("\nLinha(s) não será(ão) validada(s). " + errosLinha);
         }
 
-
     }
 
     public void opcoesMenu() {
@@ -216,41 +211,29 @@ public class Arquivo {
                     case 1:
                         for (Object s : errosHG) {
                             System.out.println(s);
-                        }
-
-
-                        continue;
+                        }continue;
 
                     case 2:
                         for (Object s : errosHL) {
                             System.out.println(s);
-                        }
-
-                        continue;
+                        }continue;
 
                     case 3:
                         for (Object s : errosDT) {
                             System.out.println(s);
-                        }
-
-                        continue;
+                        }continue;
 
                     case 4:
                         for (Object s : errosTL) {
                             System.out.println(s);
-                        }
-
-                        continue;
+                        }continue;
 
                     case 5:
                         for (Object s : errosTG) {
                             System.out.println(s);
-                        }
-
-                        continue;
+                        }continue;
 
                     case 6:
-
                         System.out.println("\nErros nas Linhas: " + errosLinha);
                         System.out.println("\nErros do Header Geral: " + errosHG);
                         System.out.println("\nErros do Header Lote: " + errosHL);
@@ -265,7 +248,6 @@ public class Arquivo {
 
                     default:
                         System.out.println("Opção inválida, tente novamente: ");
-
                 }
 
             } else if (escolha == 2) {
@@ -280,9 +262,7 @@ public class Arquivo {
                 System.out.println("Você informou uma opção inválida!");
                 break;
             }
-
         } while (escolha == 2 || escolha == 1);
-
     }
 }
 

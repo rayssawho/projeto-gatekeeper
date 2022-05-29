@@ -671,7 +671,6 @@ public class Detalhe {
             quantOkDt.add("Detalhe: TipRegDetalhe validado com sucesso!");
 
         }
-
         boolean b = Validador.validaInteiro(getModPlast());
         if (b == false) {
             String variavel = "ModPlast.";
