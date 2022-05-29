@@ -10,11 +10,11 @@ public class Arquivo {
     private File[] arquivosOk = new File[0];
     private int quantArquivosFalha;
     private ArrayList errosHG;
-    private ArrayList errosHL = new ArrayList<String>();
-    private ArrayList errosDT = new ArrayList<String>();
-    private ArrayList errosTL = new ArrayList<String>();
-    private ArrayList errosTG = new ArrayList<String>();
-    private ArrayList errosLinha = new ArrayList<String>();
+    private ArrayList errosHL;
+    private ArrayList errosDT;
+    private ArrayList errosTL;
+    private ArrayList errosTG;
+    private ArrayList errosLinha;
 
     public int getQuantArquivosFalha() {
         return quantArquivosFalha;
@@ -56,19 +56,19 @@ public class Arquivo {
         this.errosTL = errosTL;
     }
 
-    public ArrayList getErrosTG() {
+    public ArrayList<String> getErrosTG() {
         return errosTG;
     }
 
-    public void setErrosTG(ArrayList errosTG) {
+    public void setErrosTG(ArrayList<String> errosTG) {
         this.errosTG = errosTG;
     }
 
-    public ArrayList getErrosLinha() {
+    public ArrayList<String> getErrosLinha() {
         return errosLinha;
     }
 
-    public void setErrosLinha(ArrayList errosLinha) {
+    public void setErrosLinha(ArrayList<String> errosLinha) {
         this.errosLinha = errosLinha;
     }
 
@@ -114,7 +114,7 @@ public class Arquivo {
 
     }
 
-    public void executarArquivos() {
+    public void filtroArquivos() {
 
 
         for (int i = 0; i < arquivosOk.length; i++) {
@@ -146,29 +146,33 @@ public class Arquivo {
                             case "1":
                                 HeaderLote hl = new HeaderLote(linha);
                                 hl.validarSessao();
-                                //TODO instanciar arraylist aqui
+                                errosHL = new ArrayList<String>();
                                 errosHL.add(hl.getQuantErrosHL());
                                 break;
 
                             case "2":
                                 Detalhe dt = new Detalhe(linha);
                                 dt.validarSessao();
+                                errosDT = new ArrayList<String>();
                                 errosDT.add(dt.getQuantErrosDt());
                                 break;
 
                             case "3":
                                 TraillerLote tl = new TraillerLote(linha);
                                 tl.validarSessao();
+                                errosTL = new ArrayList<String>();
                                 errosTL.add(tl.getQuantErrosTL());
                                 break;
 
                             case "9":
                                 TraillerGeral tg = new TraillerGeral(linha);
                                 tg.validarSessao();
+                                errosTG = new ArrayList<String>();
                                 errosTG.add(tg.getQuantErrosTG());
                                 break;
 
                             default:
+                                errosLinha = new ArrayList<String>();
                                 errosLinha.add("\nErro no arquivo " + numeroArquivo +
                                         ": Tipo Registro não apresenta " +
                                         "um valor válido. Valor apresentado: " + valorLinha);
@@ -178,22 +182,15 @@ public class Arquivo {
                         errosLinha.add("\nERRO no arquivo " + numeroArquivo + ": na linha "
                                 + br.readLine() + "\n com " + linhaTotal
                                 + " caracteres, esperava-se 1200.\n");
-
-
                     }
-
                 }
-            } catch (FileNotFoundException e) {
+            } catch (FileNotFoundException|UnsupportedEncodingException e) {
                 e.printStackTrace();
                 System.err.println("Erro ao abrir o arquivo");
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-                System.err.println("Erro ao abrir o arquivo");
-            } catch (IOException e) {
+            } catch (IOException e){
                 e.printStackTrace();
                 System.err.println("Erro ao abrir o arquivo");
             }
-
         }
         if (!errosLinha.isEmpty()) {
             System.out.println("\nLinha(s) não será(ão) validada(s). " + errosLinha);
@@ -260,11 +257,11 @@ public class Arquivo {
                         System.out.println("\nErros do Detalhe: " + errosDT);
                         System.out.println("\nErros do Trailler Lote: " + errosTL);
                         System.out.println("\nErros do Trailler Geral: " + errosTG);
-
                         continue;
 
                     case 0:
                         System.exit(0);
+                        break;
 
                     default:
                         System.out.println("Opção inválida, tente novamente: ");
@@ -278,7 +275,7 @@ public class Arquivo {
                 menu.exibirPrimeiroMenu();
                 String caminho2 = ler.next();
                 abrirArquivos(caminho2);
-                executarArquivos();
+                filtroArquivos();
             } else {
                 System.out.println("Você informou uma opção inválida!");
                 break;

@@ -9,7 +9,7 @@ public class Main {
         String caminho = ler.nextLine();
         Arquivo arquivo = new Arquivo();
         arquivo.abrirArquivos(caminho);
-        arquivo.executarArquivos();
+        arquivo.filtroArquivos();
         arquivo.opcoesMenu();
 
 
