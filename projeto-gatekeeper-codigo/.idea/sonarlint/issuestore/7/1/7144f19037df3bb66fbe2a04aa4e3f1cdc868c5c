@@ -1,0 +1,57 @@
+
+D
+java:S3740E"/Provide the parametrized type for this generic.(¦ùç
+J
+java:S3740F"/Provide the parametrized type for this generic.(¥á ìùÿÿÿÿ
+K
+java:S3740ƒ"/Provide the parametrized type for this generic.(»ˆóÛúÿÿÿÿ
+F
+java:S3740‡"/Provide the parametrized type for this generic.(›’´¡
+K
+java:S3740‹"/Provide the parametrized type for this generic.(•îÆ¬ùÿÿÿÿ
+K
+java:S3740"/Provide the parametrized type for this generic.(œµ¹’øÿÿÿÿ
+Œ
+java:S1319ƒ"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(»ˆóÛúÿÿÿÿ
+ƒ
+java:S1319‡"lThe type of "quantErrosDt" should be an interface such as "List" rather than the implementation "ArrayList".(›’´¡
+Œ
+java:S1319‹"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(•îÆ¬ùÿÿÿÿ
+…
+java:S1319"iThe type of "quantOkDt" should be an interface such as "List" rather than the implementation "ArrayList".(œµ¹’øÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+i
+java:S3776˜"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(‚½®‰
+C
+java:S1125š"'Remove the unnecessary boolean literal.(ˆ¦¯½ıÿÿÿÿ
+C
+java:S1125£"'Remove the unnecessary boolean literal.(¨Ú¬°ûÿÿÿÿ
+>
+java:S1125­"'Remove the unnecessary boolean literal.(Í¼‚
+>
+java:S1125·"'Remove the unnecessary boolean literal.(²†ş±
+>
+java:S1125Á"'Remove the unnecessary boolean literal.(Ú½ØÇ
+>
+java:S1125Ë"'Remove the unnecessary boolean literal.(é†¼
+=
+java:S1125Õ"'Remove the unnecessary boolean literal.(Ø­Ğ 
+>
+java:S1125ß"'Remove the unnecessary boolean literal.(Áìè»
+>
+java:S1125é"'Remove the unnecessary boolean literal.(è£ÆÚ
+>
+java:S1125ó"'Remove the unnecessary boolean literal.(÷ë¬
+C
+java:S1125ı"'Remove the unnecessary boolean literal.(ä¡’Õüÿÿÿÿ
+C
+java:S1125‡"'Remove the unnecessary boolean literal.(Í¿Ášıÿÿÿÿ
+>
+java:S1125‘"'Remove the unnecessary boolean literal.(›¦øö
+=
+java:S1125›"'Remove the unnecessary boolean literal.(Ğ¤°6
+C
+java:S1125¥"'Remove the unnecessary boolean literal.(Ã•ˆÌøÿÿÿÿ
+=
+java:S1125¯"'Remove the unnecessary boolean literal.(Ÿ–

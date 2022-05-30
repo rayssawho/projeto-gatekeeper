@@ -8,12 +8,12 @@ public class Arquivo {
     private File[] arquivos = new File[0];
     private File[] arquivosOk = new File[0];
     private int quantArquivosFalha;
-    private ArrayList errosHG;
-    private ArrayList errosHL;
-    private ArrayList errosDT;
-    private ArrayList errosTL;
-    private ArrayList errosTG;
-    private ArrayList errosLinha;
+    private ArrayList errosHG = new ArrayList<>();
+    private ArrayList errosHL = new ArrayList<>();
+    private ArrayList errosDT = new ArrayList<>();
+    private ArrayList errosTL = new ArrayList<>();
+    private ArrayList errosTG = new ArrayList<>();
+    private ArrayList errosLinha = new ArrayList<>();
 
     public int getQuantArquivosFalha() {
         return quantArquivosFalha;
@@ -119,6 +119,7 @@ public class Arquivo {
             String linha;
 
             int numeroArquivo = i + 1;
+
             errosHG.add("\nArquivo: " + numeroArquivo);
             errosDT.add("\nArquivo: " + numeroArquivo);
             errosHL.add("\nArquivo: " + numeroArquivo);
@@ -133,42 +134,66 @@ public class Arquivo {
                         String valorLinha = linha.substring(0, 1);
                         switch (valorLinha) {
                             case "0":
-                                HeaderGeralArquivo hga = new HeaderGeralArquivo(linha);
-                                hga.validarSessao();
-                                errosHG = new ArrayList<String>();
-                                errosHG.add(hga.getQuantErrosHG());
+                                HeaderGeralArquivo hg = new HeaderGeralArquivo(linha);
+                                hg.validarSessao();
+                                ArrayList listaErrosHG = new ArrayList<>();
+                                listaErrosHG = hg.getQuantErrosHG();
+                                if (listaErrosHG.isEmpty()) {
+                                    errosHG.clear();
+                                } else {
+                                    errosHG.add(String.valueOf(hg.getQuantErrosHG()));
+                                }
                                 break;
 
                             case "1":
                                 HeaderLote hl = new HeaderLote(linha);
                                 hl.validarSessao();
-                                errosHL = new ArrayList<String>();
-                                errosHL.add(hl.getQuantErrosHL());
+                                ArrayList listaErrosHL = new ArrayList<>();
+                                listaErrosHL = hl.getQuantErrosHL();
+                                if (listaErrosHL.isEmpty()) {
+                                    errosHL.clear();
+                                } else {
+                                    errosHL.add(String.valueOf(hl.getQuantErrosHL()));
+                                }
                                 break;
 
                             case "2":
                                 Detalhe dt = new Detalhe(linha);
                                 dt.validarSessao();
-                                errosDT = new ArrayList<String>();
-                                errosDT.add(dt.getQuantErrosDt());
+                                ArrayList listaErrosDT = new ArrayList<>();
+                                listaErrosDT = dt.getQuantErrosDt();
+                                if (listaErrosDT.isEmpty()) {
+                                    errosDT.clear();
+                                } else {
+                                    errosDT.add(String.valueOf(dt.getQuantErrosDt()));
+                                }
                                 break;
 
                             case "3":
                                 TraillerLote tl = new TraillerLote(linha);
                                 tl.validarSessao();
-                                errosTL = new ArrayList<String>();
-                                errosTL.add(tl.getQuantErrosTL());
+                                ArrayList listaErrosTL = new ArrayList<>();
+                                listaErrosTL = tl.getQuantErrosTL();
+                                if (listaErrosTL.isEmpty()) {
+                                    errosTL.clear();
+                                } else {
+                                    errosTL.add(String.valueOf(tl.getQuantErrosTL()));
+                                }
                                 break;
 
                             case "9":
                                 TraillerGeral tg = new TraillerGeral(linha);
                                 tg.validarSessao();
-                                errosTG = new ArrayList<String>();
-                                errosTG.add(tg.getQuantErrosTG());
+                                ArrayList listaErrosTG = new ArrayList<>();
+                                listaErrosTG = tg.getQuantErrosTG();
+                                if (listaErrosTG.isEmpty()) {
+                                    errosTG.clear();
+                                } else {
+                                    errosTG.add(String.valueOf(tg.getQuantErrosTG()));
+                                }
                                 break;
 
                             default:
-                                errosLinha = new ArrayList<String>();
                                 errosLinha.add("\nErro no arquivo " + numeroArquivo +
                                         ": Tipo Registro não apresenta " +
                                         "um valor válido. Valor apresentado: " + valorLinha);
@@ -209,45 +234,91 @@ public class Arquivo {
                 int escolha1 = ler.nextInt();
                 switch (escolha1) {
                     case 1:
-                        for (Object s : errosHG) {
-                            System.out.println(s);
-                        }continue;
+                        if (!errosHG.isEmpty()) {
+                            for (Object s : errosHG) {
+                                System.out.println(s);
+                            } break;
+                        } else {
+                            System.out.println("Nenhum erro foi encontrado na sessão.");
+                        } break;
 
                     case 2:
-                        for (Object s : errosHL) {
-                            System.out.println(s);
-                        }continue;
+                        if (!errosHL.isEmpty()) {
+                            for (Object s : errosHL) {
+                                System.out.println(s);
+                            } break;
+
+                        } else {
+                            System.out.println("Nenhum erro foi encontrado na sessão.");
+                        } break;
 
                     case 3:
-                        for (Object s : errosDT) {
-                            System.out.println(s);
-                        }continue;
+                        if (!errosDT.isEmpty()) {
+                            for (Object s : errosDT) {
+                                System.out.println(s);
+                            } break;
+
+                        } else {
+                            System.out.println("Nenhum erro foi encontrado na sessão.");
+                        } break;
 
                     case 4:
-                        for (Object s : errosTL) {
-                            System.out.println(s);
-                        }continue;
+                        if (!errosTL.isEmpty()) {
+                            for (Object s : errosTL) {
+                                System.out.println(s);
+                            } break;
+
+                        } else {
+                            System.out.println("Nenhum erro foi encontrado na sessão.");
+                        } break;
 
                     case 5:
-                        for (Object s : errosTG) {
-                            System.out.println(s);
-                        }continue;
+                        if (!errosTG.isEmpty()) {
+                            for (Object s : errosTG) {
+                                System.out.println(s);
+                            } break;
+
+                        } else {
+                            System.out.println("Nenhum erro foi encontrado na sessão.");
+                        } break;
 
                     case 6:
-                        System.out.println("\nErros nas Linhas: " + errosLinha);
-                        System.out.println("\nErros do Header Geral: " + errosHG);
-                        System.out.println("\nErros do Header Lote: " + errosHL);
-                        System.out.println("\nErros do Detalhe: " + errosDT);
-                        System.out.println("\nErros do Trailler Lote: " + errosTL);
-                        System.out.println("\nErros do Trailler Geral: " + errosTG);
-                        continue;
+                        if (errosLinha == null) {
+                            System.out.println("\nErros nas Linhas: " + errosLinha);
+                        }
+                        if (!errosHG.isEmpty()) {
+                            System.out.println("\nErros do Header Geral: " + errosHG);
+                        }
+                        if (!errosHL.isEmpty()) {
+                            System.out.println("\nErros do Header Lote: " + errosHL);
+                        }
+                        if (!errosDT.isEmpty()) {
+                            System.out.println("\nErros do Detalhe: " + errosDT);
+                        }
+                        if (!errosTL.isEmpty()) {
+                            System.out.println("\nErros do Trailler Lote: " + errosTL);
+                        }
+                        if (!errosTG.isEmpty()) {
+                            System.out.println("\nErros do Trailler Geral: " + errosTG);
+                        }
+                        break;
 
+                    case 7:
+                        menu = new Menu();
+                        menu.exibirPrimeiroMenu();
+                        ler = new Scanner(System.in);
+                        String caminho = ler.nextLine();
+                        abrirArquivos(caminho);
+                        filtroArquivos();
+                        opcoesMenu();
+                        break;
                     case 0:
                         System.exit(0);
                         break;
 
                     default:
                         System.out.println("Opção inválida, tente novamente: ");
+
                 }
 
             } else if (escolha == 2) {

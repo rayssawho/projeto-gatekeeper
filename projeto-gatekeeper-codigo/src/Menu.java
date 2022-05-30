@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class Menu {
 
@@ -27,6 +26,7 @@ public class Menu {
                 "4 - Erros no Trailler Lote\n" +
                 "5 - Erros no Trailler Geral\n" +
                 "6 - Ver todos os erros\n" +
+                "7 - Validar outros arquivos\n" +
                 "0 - Sair\n");
 
     }

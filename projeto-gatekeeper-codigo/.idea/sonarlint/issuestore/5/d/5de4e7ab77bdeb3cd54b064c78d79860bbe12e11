@@ -1,0 +1,19 @@
+
+‹
+java:S1319G"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ğ©×úÿÿÿÿ
+‡
+java:S1319K"lThe type of "quantErrosHG" should be an interface such as "List" rather than the implementation "ArrayList".(›ÛûÁùÿÿÿÿ
+†
+java:S1319O"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(á¿²Ú
+
+java:S1319S"iThe type of "quantOkHG" should be an interface such as "List" rather than the implementation "ArrayList".(¹¡Õ®
+0
+java:S1220""Move this file to a named package.
+=
+java:S1125a"'Remove the unnecessary boolean literal.(Í­Ã
+=
+java:S1125l"'Remove the unnecessary boolean literal.(˜Š§í
+B
+java:S1125v"'Remove the unnecessary boolean literal.(Ñ­â»øÿÿÿÿ
+=
+java:S1125€"'Remove the unnecessary boolean literal.(Ÿª¦
