@@ -185,102 +185,61 @@ public class HeaderLote {
     }
 
     public void validarSessao() {
+        quantErrosHL = new ArrayList<String>();
+        String alfanumerico = " É esperado um valor numérico, porém o campo contém valor alfanumérico.\n";
         boolean a = Validador.validaInteiro(getTipReg());
         if (a == false) {
-            quantErrosHL.add("Erro no Header Lote, Campo: TipReg.");
-
-        } else {
-            quantOkHL.add("Header Lote: TipReg validado com sucesso!");
-
+            quantErrosHL.add("Erro no Header Lote, Campo: TipReg." + alfanumerico);
         }
 
         boolean b = Validador.validaInteiro(getModeloPlastico());
         if (b == false) {
-            quantErrosHL.add("Erro no Header Lote, Campo: ModeloPlastico.");
-
-        } else {
-            quantOkHL.add("Header Lote: ModeloPlastico validado com sucesso!");
-
+            quantErrosHL.add("Erro no Header Lote, Campo: ModeloPlastico." + alfanumerico);
         }
 
         boolean c = Validador.validaInteiro(getSeqLote());
         if (c == false) {
-            quantErrosHL.add("Erro no Header Lote, Campo: SeqLote.");
-
-        } else {
-            quantOkHL.add("Header Lote: SeqLote validado com sucesso!");
-
+            quantErrosHL.add("Erro no Header Lote, Campo: SeqLote." + alfanumerico);
         }
 
         boolean d = Validador.validaInteiro(getTipoProcessamento());
         if (d == false) {
-            quantErrosHL.add("Erro no Header Lote, Campo: TipoProcessamento.");
-
-        } else {
-            quantOkHL.add("Header Lote: TipoProcessamento validado com sucesso!");
-
+            quantErrosHL.add("Erro no Header Lote, Campo: TipoProcessamento." + alfanumerico);
         }
 
         boolean e = Validador.validaInteiro(getTipoMovimento());
         if (e == false) {
-            quantErrosHL.add("Erro no Header Lote, Campo: TipoMovimento.");
-
-        } else {
-            quantOkHL.add("Header Lote: TipoMovimento validado com sucesso!");
-
+            quantErrosHL.add("Erro no Header Lote, Campo: TipoMovimento." + alfanumerico);
         }
 
         boolean f = Validador.validaInteiro(getTipoCartao());
         if (f == false) {
-            quantErrosHL.add("Erro no Header Lote, Campo: TipoCartao.");
-
-        } else {
-            quantOkHL.add("Header Lote: TipoCartao validado com sucesso!");
-
+            quantErrosHL.add("Erro no Header Lote, Campo: TipoCartao." + alfanumerico);
         }
 
         boolean g = Validador.validaInteiro(getTipoEnvelopamento());
         if (g == false) {
-            quantErrosHL.add("Erro no Header Lote, Campo: TipoEnvelopamento.");
-
-        } else {
-            quantOkHL.add("Header Lote: TipoEnvelopamento validado com sucesso!");
-
+            quantErrosHL.add("Erro no Header Lote, Campo: TipoEnvelopamento." + alfanumerico);
         }
 
         boolean h = Validador.validaInteiro(getTipoEnderecamento());
         if (h == false) {
-            quantErrosHL.add("Erro no Header Lote, Campo: TipoEnderecamento.");
-
-        } else {
-            quantOkHL.add("Header Lote: TipoEnderecamento validado com sucesso!");
-
+            quantErrosHL.add("Erro no Header Lote, Campo: TipoEnderecamento." + alfanumerico);
         }
 
         boolean i = Validador.validaInteiro(getEtiquetaBloqueio());
         if (i == false) {
-            quantErrosHL.add("Erro no Header Lote, Campo: EtiquetaBloqueio.");
-
-        } else {
-            quantOkHL.add("Header Lote: EtiquetaBloqueio validado com sucesso!");
-
+            quantErrosHL.add("Erro no Header Lote, Campo: EtiquetaBloqueio." + alfanumerico);
         }
 
         boolean j = Validador.validaInteiro(getOverlay());
         if (j == false) {
-            quantErrosHL.add("Erro no Header Lote, Campo: Overlay.");
-
-        } else {
-            quantOkHL.add("Header Lote: Overlay validado com sucesso!");
-
+            quantErrosHL.add("Erro no Header Lote, Campo: Overlay." + alfanumerico);
         }
 
         boolean k = Validador.validaInteiro(getPostagem());
         if (k == false) {
-            quantErrosHL.add("Erro no Header Lote, Campo: Postagem.");
-
-        } else {
-            quantOkHL.add("Header Lote: Postagem validado com sucesso!");
+            quantErrosHL.add("Erro no Header Lote, Campo: Postagem." + alfanumerico);
 
         }
     }

@@ -26,9 +26,9 @@ java:S1220""Move this file to a named package.
 java:S4165"fRemove this useless assignment; "tipRegTG" already holds the assigned value along all execution paths.(©µø
 D
 java:S1172".Remove this unused method parameter "tipRegT".(Ü§õ‡
-=
-java:S1125="'Remove the unnecessary boolean literal.(Í­Ã
-=
-java:S1125F"'Remove the unnecessary boolean literal.(˜Š§í
+D
+java:S1125?"'Remove the unnecessary boolean literal.(Í­Ã8—Öñº‘0
+D
+java:S1125D"'Remove the unnecessary boolean literal.(˜Š§í8˜Öñº‘0
 E
 java:S1656"/Remove or correct this useless self-assignment.(©µø

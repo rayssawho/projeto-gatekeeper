@@ -21,27 +21,25 @@ java:S1319³"pThe return type of this method should be an interface such as "Li
 java:S1319·"iThe type of "quantOkHL" should be an interface such as "List" rather than the implementation "ArrayList".(Şà³ÿÿÿÿÿ
 0
 java:S1220""Move this file to a named package.
-i
-java:S3776»"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(‚½®‰
-C
-java:S1125½"'Remove the unnecessary boolean literal.(ˆ¦¯½ıÿÿÿÿ
-C
-java:S1125Æ"'Remove the unnecessary boolean literal.(¨Ú¬°ûÿÿÿÿ
->
-java:S1125Ï"'Remove the unnecessary boolean literal.(Í¼‚
->
-java:S1125Ø"'Remove the unnecessary boolean literal.(²†ş±
->
-java:S1125á"'Remove the unnecessary boolean literal.(Ú½ØÇ
->
-java:S1125ê"'Remove the unnecessary boolean literal.(é†¼
-=
-java:S1125ó"'Remove the unnecessary boolean literal.(Ø­Ğ 
->
-java:S1125ü"'Remove the unnecessary boolean literal.(Áìè»
->
-java:S1125…"'Remove the unnecessary boolean literal.(è£ÆÚ
->
-java:S1125"'Remove the unnecessary boolean literal.(÷ë¬
-C
-java:S1125—"'Remove the unnecessary boolean literal.(ä¡’Õüÿÿÿÿ
+J
+java:S1125¿"'Remove the unnecessary boolean literal.(ˆ¦¯½ıÿÿÿÿ8•²íº‘0
+J
+java:S1125Ä"'Remove the unnecessary boolean literal.(¨Ú¬°ûÿÿÿÿ8•²íº‘0
+E
+java:S1125É"'Remove the unnecessary boolean literal.(Í¼‚8–²íº‘0
+E
+java:S1125Î"'Remove the unnecessary boolean literal.(²†ş±8–²íº‘0
+E
+java:S1125Ó"'Remove the unnecessary boolean literal.(Ú½ØÇ8—²íº‘0
+E
+java:S1125Ø"'Remove the unnecessary boolean literal.(é†¼8˜²íº‘0
+D
+java:S1125İ"'Remove the unnecessary boolean literal.(Ø­Ğ 8™²íº‘0
+E
+java:S1125â"'Remove the unnecessary boolean literal.(Áìè»8™²íº‘0
+E
+java:S1125ç"'Remove the unnecessary boolean literal.(è£ÆÚ8š²íº‘0
+E
+java:S1125ì"'Remove the unnecessary boolean literal.(÷ë¬8š²íº‘0
+J
+java:S1125ñ"'Remove the unnecessary boolean literal.(ä¡’Õüÿÿÿÿ8›²íº‘0

@@ -662,165 +662,87 @@ public class Detalhe {
     }
 
     public void validarSessao() {
+        quantErrosDt = new ArrayList<String>();
+        String alfanumerico = " É esperado um valor numérico, porém o campo contém valor alfanumérico.\n";
         boolean a = Validador.validaInteiro(getTipRegDetalhe());
         if (a == false) {
-            String variavel = "TipRegDetalhe.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: TipRegDetalhe validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: TipRegDetalhe." + alfanumerico);
         }
+
         boolean b = Validador.validaInteiro(getModPlast());
         if (b == false) {
-            String variavel = "ModPlast.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: ModPlast validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: ModPlast." + alfanumerico);
         }
 
         boolean c = Validador.validaInteiro(getSeqCart());
         if (c == false) {
-            String variavel = "SeqCart.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: SeqCart validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: SeqCart." + alfanumerico);
         }
 
         boolean d = Validador.validaInteiro(getCep());
         if (d == false) {
-            String variavel = "Cep.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: Cep validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: Cep." + alfanumerico);
         }
 
         boolean e = Validador.validaInteiro(getNroAr());
         if (e == false) {
-            String variavel = "NroAr.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: NroAr validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: NroAr." + alfanumerico);
         }
 
         boolean f = Validador.validaInteiro(getCepAr());
         if (f == false) {
-            String variavel = "CepAr.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: CepAr validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: CepAr." + alfanumerico);
         }
 
         boolean g = Validador.validaInteiro(getCodRegional());
         if (g == false) {
-            String variavel = "CodRegional.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: CodRegional validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: CodRegional." + alfanumerico);
         }
 
         boolean h = Validador.validaInteiro(getCodAgencia());
         if (h == false) {
-            String variavel = "CodAgencia.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: CodAgencia validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: CodAgencia." + alfanumerico);
         }
 
         boolean i = Validador.validaInteiro(getCepAge());
         if (i == false) {
-            String variavel = "CepAge.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: CepAge validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: CepAge." + alfanumerico);
         }
 
         boolean j = Validador.validaInteiro(getCodPlast());
         if (j == false) {
-            String variavel = "CodPlast.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: CodPlast validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: CodPlast." + alfanumerico);
         }
 
         boolean k = Validador.validaInteiro(getVlLimite());
         if (k == false) {
-            String variavel = "VlLimite.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: VlLimite validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: VlLimite." + alfanumerico);
         }
 
         boolean l = Validador.validaInteiro(getDiaVenc());
         if (l == false) {
-            String variavel = "DiaVenc.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: DiaVenc validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: DiaVenc." + alfanumerico);
         }
 
         boolean m = Validador.validaInteiro(getCodigoBarras());
         if (m == false) {
-            String variavel = "CodigoBarras.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: CodigoBarras validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: CodigoBarras." + alfanumerico);
         }
 
         boolean n = Validador.validaInteiro(getDeficienteVisual());
         if (n == false) {
-            String variavel = "DeficienteVisual.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: DeficienteVisual validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: DeficienteVisual." + alfanumerico);
         }
 
         boolean o = Validador.validaInteiro(getCodigoCartao());
         if (o == false) {
-            String variavel = "CodigoCartao.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: CodigoCartao validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: CodigoCartao." + alfanumerico);
         }
 
         boolean p = Validador.validaInteiro(getNumeroEndereco());
         if (p == false) {
-            String variavel = "NumeroEndereco.";
-            msgDeErroDT(variavel);
-
-        } else {
-            quantOkDt.add("Detalhe: NumeroEndereco validado com sucesso!");
-
+            quantErrosDt.add("Erro no Detalhe, Campo: NumeroEndereco." + alfanumerico);
         }
-
     }
 }
 

@@ -22,7 +22,7 @@ java:S1319E"pThe return type of this method should be an interface such as "Lis
 java:S1319I"iThe type of "quantOkTL" should be an interface such as "List" rather than the implementation "ArrayList".(²Èğ”
 0
 java:S1220""Move this file to a named package.
-=
-java:S1125O"'Remove the unnecessary boolean literal.(Í­Ã
-=
-java:S1125X"'Remove the unnecessary boolean literal.(˜Š§í
+D
+java:S1125Q"'Remove the unnecessary boolean literal.(Í­Ã8©ñïº‘0
+D
+java:S1125V"'Remove the unnecessary boolean literal.(˜Š§í8ªñïº‘0

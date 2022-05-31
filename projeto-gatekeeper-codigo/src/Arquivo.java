@@ -14,6 +14,11 @@ public class Arquivo {
     private ArrayList errosTL = new ArrayList<>();
     private ArrayList errosTG = new ArrayList<>();
     private ArrayList errosLinha = new ArrayList<>();
+    private ArrayList listaErrosHG = new ArrayList<>();
+    private ArrayList listaErrosHL = new ArrayList<>();
+    private ArrayList listaErrosDT = new ArrayList<>();
+    private ArrayList listaErrosTL = new ArrayList<>();
+    private ArrayList listaErrosTG = new ArrayList<>();
 
     public int getQuantArquivosFalha() {
         return quantArquivosFalha;
@@ -136,7 +141,6 @@ public class Arquivo {
                             case "0":
                                 HeaderGeralArquivo hg = new HeaderGeralArquivo(linha);
                                 hg.validarSessao();
-                                ArrayList listaErrosHG = new ArrayList<>();
                                 listaErrosHG = hg.getQuantErrosHG();
                                 if (listaErrosHG.isEmpty()) {
                                     errosHG.clear();
@@ -148,7 +152,6 @@ public class Arquivo {
                             case "1":
                                 HeaderLote hl = new HeaderLote(linha);
                                 hl.validarSessao();
-                                ArrayList listaErrosHL = new ArrayList<>();
                                 listaErrosHL = hl.getQuantErrosHL();
                                 if (listaErrosHL.isEmpty()) {
                                     errosHL.clear();
@@ -160,11 +163,11 @@ public class Arquivo {
                             case "2":
                                 Detalhe dt = new Detalhe(linha);
                                 dt.validarSessao();
-                                ArrayList listaErrosDT = new ArrayList<>();
                                 listaErrosDT = dt.getQuantErrosDt();
                                 if (listaErrosDT.isEmpty()) {
                                     errosDT.clear();
                                 } else {
+
                                     errosDT.add(String.valueOf(dt.getQuantErrosDt()));
                                 }
                                 break;
@@ -172,7 +175,6 @@ public class Arquivo {
                             case "3":
                                 TraillerLote tl = new TraillerLote(linha);
                                 tl.validarSessao();
-                                ArrayList listaErrosTL = new ArrayList<>();
                                 listaErrosTL = tl.getQuantErrosTL();
                                 if (listaErrosTL.isEmpty()) {
                                     errosTL.clear();
@@ -184,7 +186,6 @@ public class Arquivo {
                             case "9":
                                 TraillerGeral tg = new TraillerGeral(linha);
                                 tg.validarSessao();
-                                ArrayList listaErrosTG = new ArrayList<>();
                                 listaErrosTG = tg.getQuantErrosTG();
                                 if (listaErrosTG.isEmpty()) {
                                     errosTG.clear();
@@ -226,7 +227,7 @@ public class Arquivo {
 
         Scanner ler = new Scanner(System.in);
         int escolha = ler.nextInt();
-
+        conferirErros();
         do {
             if (escolha == 1) {
 
@@ -234,6 +235,7 @@ public class Arquivo {
                 int escolha1 = ler.nextInt();
                 switch (escolha1) {
                     case 1:
+
                         if (!errosHG.isEmpty()) {
                             for (Object s : errosHG) {
                                 System.out.println(s);
@@ -283,7 +285,7 @@ public class Arquivo {
                         } break;
 
                     case 6:
-                        if (errosLinha == null) {
+                        if (!errosLinha.isEmpty()) {
                             System.out.println("\nErros nas Linhas: " + errosLinha);
                         }
                         if (!errosHG.isEmpty()) {
@@ -304,6 +306,12 @@ public class Arquivo {
                         break;
 
                     case 7:
+                        listaErrosHG.clear();
+                        listaErrosHL.clear();
+                        listaErrosDT.clear();
+                        listaErrosTL.clear();
+                        listaErrosTG.clear();
+
                         menu = new Menu();
                         menu.exibirPrimeiroMenu();
                         ler = new Scanner(System.in);
@@ -311,6 +319,7 @@ public class Arquivo {
                         abrirArquivos(caminho);
                         filtroArquivos();
                         opcoesMenu();
+                        conferirErros();
                         break;
                     case 0:
                         System.exit(0);
@@ -334,6 +343,24 @@ public class Arquivo {
                 break;
             }
         } while (escolha == 2 || escolha == 1);
+
+    }
+    public void conferirErros() {
+        if (listaErrosHG.isEmpty()) {
+            errosHG.clear();
+        }
+        if (listaErrosHL.isEmpty()) {
+            errosHL.clear();
+        }
+        if (listaErrosDT.isEmpty()) {
+            errosDT.clear();
+        }
+        if (listaErrosTL.isEmpty()) {
+            errosTL.clear();
+        }
+        if (listaErrosTG.isEmpty()) {
+            errosTG.clear();
+        }
     }
 }
 

@@ -91,47 +91,24 @@ public class HeaderGeralArquivo {
 
     public void validarSessao() {
         quantErrosHG = new ArrayList<>();
-        quantOkHG = new ArrayList<>();
-        String alfanumerico = " É esperado um valor numérico, porém o campo contém valor alfanumérico.";
+        String alfanumerico = " É esperado um valor numérico, porém o campo contém valor alfanumérico.\n";
         boolean x = Validador.validaInteiro(getTipRegHg());
         if (x == false) {
-            String variavel = "TipRegHg.";
-            msgDeErroHG(variavel);
             quantErrosHG.add("Erro no Header Geral, Campo: TipRegHg." + alfanumerico);
-
-        } else {
-            quantOkHG.add("Header Geral: TipRegHg validado com sucesso!");
-
         }
-
         boolean y = Validador.validaInteiro(getBanco());
         if (y == false) {
             quantErrosHG.add("Erro no Header Geral, Campo: banco." + alfanumerico);
-
-
-        } else {
-            quantOkHG.add("Header Geral: banco validado com sucesso!");
-
         }
 
         boolean z = Validador.validaInteiro(getNsp());
         if (z == false) {
             quantErrosHG.add("Erro no Header Geral, Campo: Nsp. " + alfanumerico);
-
-
-        } else {
-            quantOkHG.add("Header Geral: Nsp validado com sucesso!");
-
         }
 
         boolean w = Validador.validaInteiro(getDtMovto());
         if (w == false) {
             quantErrosHG.add("Erro no Header Geral, Campo: DtMovto." + alfanumerico);
-
-
-        } else {
-            quantOkHG.add("Header Geral: DtMovto validado com sucesso!");
-
         }
     }
 

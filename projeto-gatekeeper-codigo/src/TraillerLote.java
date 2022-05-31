@@ -75,22 +75,16 @@ public class TraillerLote {
     }
 
     public void validarSessao() {
+        quantErrosTL = new ArrayList<String>();
+        String alfanumerico = " É esperado um valor numérico, porém o campo contém valor alfanumérico.\n";
         boolean x = Validador.validaInteiro(getTipRegT());
         if (x == false) {
-            quantErrosTL.add("Erro no Trailler Lote, Campo: TipRegT.");
-
-        } else {
-            quantOkTL.add("Trailler Lote: TipRegT validado com sucesso!");
-
+            quantErrosTL.add("Erro no Trailler Lote, Campo: TipRegT." + alfanumerico);
         }
 
         boolean y = Validador.validaInteiro(getQtdCartLote());
         if (y == false) {
-            quantErrosTL.add("Erro no Trailler Lote, Campo: QtdCartLote.");
-
-        } else {
-            quantOkTL.add("Trailler Lote: QtdCartLote validado com sucesso!");
-
+            quantErrosTL.add("Erro no Trailler Lote, Campo: QtdCartLote." + alfanumerico);
         }
     }
 }

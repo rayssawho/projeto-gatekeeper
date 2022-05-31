@@ -22,36 +22,36 @@ java:S1319"iThe type of "quantOkDt" should be an interface such as "List" rat
 0
 java:S1220""Move this file to a named package.
 i
-java:S3776˜"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(‚½®‰
+java:S3776˜"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(‚½®‰
 C
-java:S1125š"'Remove the unnecessary boolean literal.(ˆ¦¯½ıÿÿÿÿ
+java:S1125œ"'Remove the unnecessary boolean literal.(ˆ¦¯½ıÿÿÿÿ
 C
-java:S1125£"'Remove the unnecessary boolean literal.(¨Ú¬°ûÿÿÿÿ
+java:S1125¡"'Remove the unnecessary boolean literal.(¨Ú¬°ûÿÿÿÿ
 >
-java:S1125­"'Remove the unnecessary boolean literal.(Í¼‚
+java:S1125¦"'Remove the unnecessary boolean literal.(Í¼‚
 >
-java:S1125·"'Remove the unnecessary boolean literal.(²†ş±
+java:S1125«"'Remove the unnecessary boolean literal.(²†ş±
 >
-java:S1125Á"'Remove the unnecessary boolean literal.(Ú½ØÇ
+java:S1125°"'Remove the unnecessary boolean literal.(Ú½ØÇ
 >
-java:S1125Ë"'Remove the unnecessary boolean literal.(é†¼
+java:S1125µ"'Remove the unnecessary boolean literal.(é†¼
 =
-java:S1125Õ"'Remove the unnecessary boolean literal.(Ø­Ğ 
+java:S1125º"'Remove the unnecessary boolean literal.(Ø­Ğ 
 >
-java:S1125ß"'Remove the unnecessary boolean literal.(Áìè»
+java:S1125¿"'Remove the unnecessary boolean literal.(Áìè»
 >
-java:S1125é"'Remove the unnecessary boolean literal.(è£ÆÚ
+java:S1125Ä"'Remove the unnecessary boolean literal.(è£ÆÚ
 >
-java:S1125ó"'Remove the unnecessary boolean literal.(÷ë¬
+java:S1125É"'Remove the unnecessary boolean literal.(÷ë¬
 C
-java:S1125ı"'Remove the unnecessary boolean literal.(ä¡’Õüÿÿÿÿ
+java:S1125Î"'Remove the unnecessary boolean literal.(ä¡’Õüÿÿÿÿ
 C
-java:S1125‡"'Remove the unnecessary boolean literal.(Í¿Ášıÿÿÿÿ
+java:S1125Ó"'Remove the unnecessary boolean literal.(Í¿Ášıÿÿÿÿ
 >
-java:S1125‘"'Remove the unnecessary boolean literal.(›¦øö
+java:S1125Ø"'Remove the unnecessary boolean literal.(›¦øö
 =
-java:S1125›"'Remove the unnecessary boolean literal.(Ğ¤°6
+java:S1125İ"'Remove the unnecessary boolean literal.(Ğ¤°6
 C
-java:S1125¥"'Remove the unnecessary boolean literal.(Ã•ˆÌøÿÿÿÿ
+java:S1125â"'Remove the unnecessary boolean literal.(Ã•ˆÌøÿÿÿÿ
 =
-java:S1125¯"'Remove the unnecessary boolean literal.(Ÿ–
+java:S1125ç"'Remove the unnecessary boolean literal.(Ÿ–

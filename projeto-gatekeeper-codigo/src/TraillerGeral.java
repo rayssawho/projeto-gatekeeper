@@ -57,22 +57,16 @@ public class TraillerGeral {
     }
 
     public void validarSessao() {
+        quantErrosTG = new ArrayList<String>();
+        String alfanumerico = " É esperado um valor numérico, porém o campo contém valor alfanumérico.\n";
         boolean x = Validador.validaInteiro(getTipRegTG());
         if (x == false) {
-            quantErrosTG.add("Erro no Trailler Geral, Campo: TipRegTG.");
-
-        } else {
-            quantOkTG.add("Trailler Geral: TipRegTG validado com sucesso!");
-
+            quantErrosTG.add("Erro no Trailler Geral, Campo: TipRegTG." + alfanumerico);
         }
 
         boolean y = Validador.validaInteiro(getQtdCartArq());
         if (y == false) {
-            quantErrosTG.add("Erro no Trailler Geral, Campo: QtdCartArq.");
-
-        } else {
-            quantOkTG.add("Trailler Geral: QtdCartArq validado com sucesso!");
-
+            quantErrosTG.add("Erro no Trailler Geral, Campo: QtdCartArq." + alfanumerico);
         }
     }
 }
