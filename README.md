@@ -33,8 +33,18 @@ O projeto integrador tem como objetivo, apresentar para vocês uma situação em
 <a href="https://ibb.co/4SSNpCX"><img src="https://i.ibb.co/kDDcXzw/TG.jpg" alt="TG" border="0"></a>
 
 ## Executando o código:
-
-TODO
+#### Copie e cole o caminho do diretório de arquivos que deseja validar:
+<a href="https://ibb.co/9yLKSdX"><img src="https://i.ibb.co/p48V5kD/1.jpg" alt="1" border="0"></a>
+#### Caso os arquivos estejam corretos, irá apresentar a confirmação:
+<a href="https://ibb.co/3vQp1cH"><img src="https://i.ibb.co/ScGtNBp/2.jpg" alt="2" border="0"></a>
+#### Outro Menu irá aparecer:
+<a href="https://ibb.co/yQJ35M4"><img src="https://i.ibb.co/mc7xtYN/3.jpg" alt="3" border="0"></a>
+#### Caso a opção escolhida seja 1:
+<a href="https://ibb.co/xXJyxVs"><img src="https://i.ibb.co/Fmg9RGW/4.jpg" alt="4" border="0"></a>
+#### Caso a opção escolhida seja 6:
+<a href="https://ibb.co/sRd8Nkm"><img src="https://i.ibb.co/fFzjyB1/6.jpg" alt="6" border="0"></a>
+#### Caso a opção escolhida seja 1:
+<a href="https://ibb.co/58v5xXm"><img src="https://i.ibb.co/fptCGVf/7.jpg" alt="7" border="0"></a>
 
 ## By:
 
@@ -46,7 +56,7 @@ TODO
 
 
 
-
+<img align="right" alt="pc" height="200" style="border-radius:50px;" src="https://media2.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif?cid=790b761185c7d6e4c1ca2913df4eadc1d09c1c21aa09b8bc&rid=giphy.gif&ct=s">
 
 
 
